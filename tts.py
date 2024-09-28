@@ -57,6 +57,7 @@ class TextToSpeechService:
             tuple: A tuple containing the sample rate and the generated audio array.
         """
         pieces = []
+        nltk.download('punkt')
         sentences = nltk.sent_tokenize(text)
         silence = np.zeros(int(0.25 * self.model.generation_config.sample_rate))
 

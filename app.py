@@ -12,7 +12,7 @@ from langchain_community.llms import Ollama
 from tts import TextToSpeechService
 
 console = Console()
-stt = whisper.load_model("base.en")
+stt = whisper.load_model("small")
 tts = TextToSpeechService()
 
 template = """
